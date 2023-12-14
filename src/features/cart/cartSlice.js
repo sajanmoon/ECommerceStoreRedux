@@ -7,8 +7,8 @@ export const cartSlice = createSlice({
     add: (state, action) => {
       state.push(action.payload);
     },
-    remove: () => {
-      state = state.filter((items) => items.id !== action.payload);
+    remove: (state, action) => {
+      return state.filter((items) => items.id !== action.payload);
     },
   },
 });
